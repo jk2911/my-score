@@ -1,0 +1,97 @@
+﻿<Window x:Class="MyScore.View.MatchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyScore.View"
+        mc:Ignorable="d"
+        Height="486.4" Width="410" Title="" Icon="/MyScore;component/Logo.jpg">
+    <Grid>
+        <Grid Height="25" VerticalAlignment="Top" Background="Green">
+            <Label Content="{Binding Championship, Mode=OneWay}" Width="auto" Foreground="White"/>
+        </Grid>
+
+        <Label HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" Content="{Binding Date, Mode=OneWay}" Height="25" Width="100" Margin="155,25,0,0"  />
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Height="75" Margin="63.2,40,0,0">
+            <Border CornerRadius="8.8" BorderThickness="1" BorderBrush="Black" Background="White">
+                <Image Source="{Binding HomeSrc, Mode=OneWay}"  HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="67.5" MaxWidth="67.5" MinHeight="56.25" MinWidth="56.25"/>
+            </Border>
+        </Grid>
+        <TextBlock Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="202" Text="{Binding HomeName, Mode=OneWay}" TextAlignment="Center" TextDecorations="UnderLine" Margin="0,120,0,0"/>
+
+        <Label Content="{Binding Goal1, Mode=OneWay}" HorizontalContentAlignment="Center" Margin="143,55,206.2,346.8" FontSize="25"/>
+        <Label Content=":" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" Height="35" Width="15" Margin="0,60,0,0"/>
+        <Label Content="{Binding Goal2, Mode=OneWay}" Margin="212,55,143.2,346.8" HorizontalContentAlignment="Center" FontSize="25" />
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Height="75" Margin="264.8,40,0,0">
+            <Border CornerRadius="8.8" BorderThickness="1" BorderBrush="Black" Background="White">
+                <Image Source="{Binding AwaySrc}"  HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="67.5" MaxWidth="67.5" MinHeight="56.25" MinWidth="56.25"/>
+            </Border>
+        </Grid>
+        <TextBlock Height="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="202" Text="{Binding AwayName, Mode=OneWay}" TextDecorations="UnderLine" TextAlignment="Center" Margin="202,120,-0.8,0"/>
+
+        <TabControl Width="399" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,155,0,0">
+            <TabItem Header="H2H">
+                <ScrollViewer Height="260" Margin="0,0,5.6,0">
+                    <StackPanel>
+                        <Label Background="LightGray" Content="{Binding HomeName}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="370" Padding="0" />
+                        <ListBox ItemsSource="{Binding HomeMatches}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <local:ControlLastMatch/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        <Label Background="LightGray" Content="{Binding AwayName}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="370" Padding="0" />
+                        <ListBox ItemsSource="{Binding AwayMatches}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <local:ControlLastMatch/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Visibility="{Binding Visibility}" Header="Статистика">
+                <Grid Margin="0,0,0.6,0">
+                    <Label Padding="0" Content="Удары" HorizontalContentAlignment="Center" FontSize="9" VerticalContentAlignment="Top" Margin="142,20,138,209"/>
+                    <Label Padding="0" Height="15" Width="25" Margin="10,28,355,209" Content="{Binding Shots1}"/>
+                    <Label Padding="0" Height="15" Width="25" Margin="355,28,10,209" Content="{Binding Shots2}" HorizontalContentAlignment="Right"/>
+                    <ProgressBar Padding="0" BorderThickness="0" Background="Green" Foreground="LightGray" Value="{Binding Shots2, Mode=OneWay}" Maximum="{Binding MaxShots, Mode=OneWay}" Height="10" Width="185" Margin="10,43,194,199" />
+                    <ProgressBar Padding="0" BorderThickness="0" Background="LightGray" Foreground="Green" Value="{Binding Shots2, Mode=OneWay}" Maximum="{Binding MaxShots, Mode=OneWay}" Height="10" Width="185" Margin="200,43,4,199" />
+
+
+                    <Label Padding="0" Content="Владение" HorizontalContentAlignment="Center" FontSize="9" VerticalContentAlignment="Top" Margin="142,58,138,171"/>
+                    <Label Padding="0" Height="15" Width="25" Content="{Binding BallControl1, Mode=OneWay}" Margin="10,63,354,174"/>
+                    <Label Padding="0" Height="15" Width="25" Content="{Binding BallControl2, Mode=OneWay}" Margin="360,63,4,174" HorizontalContentAlignment="Right"/>
+                    <ProgressBar Padding="0" BorderThickness="0" Background="Green" Foreground="LightGray" Value="{Binding BallControl2, Mode=OneWay}" Maximum="100" Height="10" Width="185" Margin="10,78,194,164" />
+                    <ProgressBar Padding="0" BorderThickness="0" Background="LightGray" Foreground="Green" Value="{Binding BallControl2, Mode=OneWay}" Maximum="100" Height="10" Width="185" Margin="200,78,4,164" />
+
+                    <Label Padding="0" Content="Офсайды" HorizontalContentAlignment="Center" FontSize="9" VerticalContentAlignment="Top" Margin="142,93,138,136"/>
+                    <Label Padding="0" Height="15" Content="{Binding Offside1, Mode=OneWay}" Width="25" Margin="10,101,354,136"/>
+                    <Label Padding="0" Height="15" Content="{Binding Offside2, Mode=OneWay}" Width="25" Margin="360,101,4,136" HorizontalContentAlignment="Right"/>
+                    <ProgressBar Padding="0" BorderThickness="0" Background="Green" Foreground="LightGray" Value="{Binding Offside2, Mode=OneWay}" Maximum="{Binding MaxOffside, Mode=OneWay}" Height="10" Width="185" Margin="10,116,194,126" />
+                    <ProgressBar Padding="0" BorderThickness="0" Background="LightGray" Foreground="Green" Value="{Binding Offside2, Mode=OneWay}" Maximum="{Binding MaxOffside, Mode=OneWay}" Height="10" Width="185" Margin="200,116,4,126" />
+
+                    <Label Padding="0" Content="Желтые карточки" HorizontalContentAlignment="Center" FontSize="9" VerticalContentAlignment="Top" Margin="142,131,138,98"/>
+                    <Label Padding="0" Height="15" Width="25" Content="{Binding YellowCard1, Mode=OneWay}" Margin="10,139,354,98"/>
+                    <Label Padding="0" Height="15" Width="25" Content="{Binding YellowCard2, Mode=OneWay}" Margin="360,139,4,98" HorizontalContentAlignment="Right"/>
+                    <ProgressBar Padding="0" BorderThickness="0" Background="Green" Foreground="LightGray" Value="{Binding YellowCard2, Mode=OneWay}" Maximum="{Binding MaxYellowCard, Mode=OneWay}" Height="10" Width="185" Margin="10,154,194,88" />
+                    <ProgressBar Padding="0" BorderThickness="0" Background="LightGray" Foreground="Green" Value="{Binding YellowCard2, Mode=OneWay}" Maximum="{Binding MaxYellowCard, Mode=OneWay}" Height="10" Width="185" Margin="200,154,4,88" />
+
+                    <Label Padding="0" Content="Красные карточки" HorizontalContentAlignment="Center" FontSize="9" VerticalContentAlignment="Top" Margin="142,169,138,60"/>
+                    <Label Padding="0" Height="15" Width="25" Content="{Binding RedCard1, Mode=OneWay}" Margin="10,182,354,55"/>
+                    <Label Padding="0" Height="15" Width="25" Content="{Binding RedCard2, Mode=OneWay}" Margin="360,182,4,55" HorizontalContentAlignment="Right"/>
+                    <ProgressBar Padding="0" BorderThickness="0" Background="Green" Foreground="LightGray" Value="{Binding RedCard2, Mode=OneWay}" Maximum="{Binding MaxRedCard, Mode=OneWay}" Height="10" Width="185" Margin="10,197,194,45" />
+                    <ProgressBar Padding="0" BorderThickness="0" Background="LightGray" Foreground="Green" Value="{Binding RedCard2, Mode=OneWay}" Maximum="{Binding MaxRedCard, Mode=OneWay}" Height="10" Width="185" Margin="200,197,4,45" />
+
+                    <Label Padding="0" Content="Угловые" HorizontalContentAlignment="Center" FontSize="9" VerticalContentAlignment="Top" Margin="142,212,138,17"/>
+                    <Label Padding="0" Height="15" Width="25" Content="{Binding Corner1, Mode=OneWay}" Margin="10,225,354,12"/>
+                    <Label Padding="0" Height="15" Width="25" Content="{Binding Corner2, Mode=OneWay}" Margin="360,225,4,12" HorizontalContentAlignment="Right"/>
+                    <ProgressBar Padding="0" BorderThickness="0" Background="Green" Foreground="LightGray" Value="{Binding Corner2, Mode=OneWay}" Maximum="{Binding MaxCorner, Mode=OneWay}" Height="10" Width="185" Margin="10,240,194,2" />
+                    <ProgressBar Padding="0" BorderThickness="0" Background="LightGray" Foreground="Green" Value="{Binding Corner2, Mode=OneWay}" Maximum="{Binding MaxCorner, Mode=OneWay}" Height="10" Width="185" Margin="200,240,4,2" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

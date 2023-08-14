@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="MyScore.View.ControlLastMatch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyScore.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="355">
+    <StackPanel Orientation="Horizontal">
+        <Label Content="{Binding Date}" Width="70"/>
+        <Label Content="{Binding Home}" Width="117.5"/>
+        <Label Content="{Binding Away}" Width="117.5"/>
+        <Label Content="{Binding Goal1}" Width="17.5"/>
+        <Label Content=":" Width="15" HorizontalContentAlignment="Center"/>
+        <Label Content="{Binding Goal2}" Width="17.5"/>
+    </StackPanel>
+</UserControl>

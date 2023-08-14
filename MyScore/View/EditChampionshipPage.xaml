@@ -1,0 +1,65 @@
+﻿<Page x:Class="MyScore.View.EditChampionshipPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyScore.ViewModel"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditChampionshipPage">
+
+    <Grid>
+        <Grid Background="Green" HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="800" Margin="0,0,0,0">
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="75" Margin="25,10,0,0">
+                <Border CornerRadius="8.8" BorderThickness="1" Background="White">
+                    <Image Source="/MyScore;component/Logo.jpg"  HorizontalAlignment="Left" Height="55" Margin="9.2,9.2,0,0" VerticalAlignment="Top" Width="55"/>
+                </Border>
+            </Grid>
+            <Label Content="Изменение чемпионата" Foreground="White" FontSize="17" HorizontalAlignment="Left" Margin="120,30,0,0" VerticalAlignment="Top" Width="240" Height="30"/>
+        </Grid>
+        <Grid Margin="0,95,0,-0.4">
+            <Label Height="25" Width="135" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Название чемпионата" Margin="315,55,0,0"  />
+            <Label Content="Регион" Height="25"  Width="135" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="315,115,0,0"/>
+
+            <TextBox Height="25" Text="{Binding Name}" Width="170" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="530,55,0,0"/>
+            <TextBox Height="25" Width="170" Text="{Binding Region}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="530,115,0,0"/>
+
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="200" Margin="55,20,0,0">
+                <Border CornerRadius="8.8" BorderThickness="1" BorderBrush="Black" Background="White">
+                    <Image Source="{Binding Image, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Center" MaxHeight="180" MaxWidth="180" MinWidth="150" MinHeight="150" VerticalAlignment="Center"/>
+                </Border>
+            </Grid>
+
+            <Button Background="Green" Foreground="White" Content="Изменить изображение" Height="25" Width="200" Command="{Binding EditImageCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,240,0,0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Background="Green" Foreground="White" Content="Удалить изображение" Height="25" Width="200" Command="{Binding RemoveImageCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,270,0,0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Padding="0" Command="{Binding EditChampionshipCommand}" Height="30" Content="Изменить" Width="100" Background="Green" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="435,240,0,0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Padding="0" Command="{Binding CancelCommand}" Height="30" Content="Отмена" Width="100" Background="Green" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="600,240,0,0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>

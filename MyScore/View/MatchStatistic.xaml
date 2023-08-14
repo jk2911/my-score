@@ -1,0 +1,86 @@
+﻿<Page x:Class="MyScore.View.MatchStatistic"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyScore.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" Title="Изменение результата">
+
+    <Grid>
+        <Grid Background="Green" HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="800" Margin="0,0,0,0">
+            <Grid HorizontalAlignment="Left" Width="75" Height="75" Margin="20,10,505,10">
+                <Border CornerRadius="8.8" BorderThickness="1" Background="White">
+                    <Image Source="{Binding ImageSrc}"  HorizontalAlignment="Left" Height="55" Margin="9.2,9.2,0,0" VerticalAlignment="Top" Width="55"/>
+                </Border>
+            </Grid>
+            <Label Content="{Binding Championship}" Foreground="White" FontSize="17" HorizontalAlignment="Left" Margin="120,30,0,0" VerticalAlignment="Top" Width="135" Height="30"/>
+        </Grid>
+
+        <Grid Margin="0,100,0,-0.4">
+            <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Focusable="False" DisplayDateStart="{Binding DateStart, Mode=OneWay}" DisplayDateEnd="{Binding DateEnd, Mode=OneWay}" SelectedDate="{Binding Date, UpdateSourceTrigger=PropertyChanged}" Height="25" Width="175"  Margin="30,10,0,0"/>
+            <Label Height="25" Width="215" Content="{Binding HomeName}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,10,0,0" />
+            <Label Height="25" Width="215" Content="{Binding AwayName}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,10,0,0" />
+
+            <Label Height="25" Width="175" Content="Голы" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,40,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding Goal1, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,40,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding Goal2, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,40,0,0" />
+
+            <Label Height="25" Width="175" Content="Удары" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,70,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding Shots1, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,70,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding Shots2, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,70,0,0" />
+
+            <Label Height="25" Width="175" Content="Владение" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,100,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding BallControl1, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,100,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding BallControl2, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,100,0,0" />
+
+            <Label Height="25" Width="175" Content="Офсайды" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,130,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding Offside1, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,130,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding Offside2, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,130,0,0" />
+
+            <Label Height="25" Width="175" Content="Желтые карточки" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,160,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding YellowCard1, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,160,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding YellowCard2, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,160,0,0" />
+
+            <Label Height="25" Width="175" Content="Красные карточки" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,190,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding RedCard1, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,190,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding RedCard2, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,190,0,0" />
+
+            <Label Height="25" Width="175" Content="Угловые" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,220,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding Corner1, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,220,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding Corner2, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="485,220,0,0" />
+
+            <Label Height="25" Width="175" Content="Стадия" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,250,0,0" />
+            <TextBox Height="25" Width="100" Text="{Binding Stage, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="365,250,0,0" />
+
+            <Button Padding="0" Background="Green" Foreground="White" Height="25" Command="{Binding EditMatchCommand}" Content="Изменить" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,285,0,0" Width="84">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Padding="0" Background="Green" Foreground="White" Height="25" Command="{Binding DeleteResultsCommand}" Content="Очистить результат" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="360,285,0,0" Width="105">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Padding="0" Background="Green" Foreground="White" Height="25" Command="{Binding DeleteCommand}" Content="Удалить" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="490,285,0,0" Width="84">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button Background="Green" Foreground="White" Height="25" Command="{Binding CancelCommand}" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Отмена" Margin="586,285,0,0" Width="84" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>

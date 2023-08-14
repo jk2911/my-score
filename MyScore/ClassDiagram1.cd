@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MyScore.App">
+    <Position X="34" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.NavigateArgs">
+    <Position X="38.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>NavigateArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.Logic.HashPassword">
+    <Position X="29.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Logic\HashPassword.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.Logic.ResultsMatch">
+    <Position X="4.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAQAAAAAABAAAAAAAAAAAAQAAAEAAAEAAA=</HashCode>
+      <FileName>Logic\ResultsMatch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.Logic.SaveAndLoadPicture">
+    <Position X="4.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAQAAAACAAAA=</HashCode>
+      <FileName>Logic\SaveAndLoadPicture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.Model.Championship">
+    <Position X="29.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAgAAAAAAAAAAAAAQAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Championship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.Model.CurrentObject">
+    <Position X="20.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAACAAAAAAAACEAQgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\CurrentObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.Model.League">
+    <Position X="34" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAAAggAAIEAEAAACAEAAAAAAAEAAAAAQAAA=</HashCode>
+      <FileName>Model\League.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.Model.Match">
+    <Position X="18.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAIAAYAAgAAAAIAAAAAABAAgAAAAAAAA=</HashCode>
+      <FileName>Model\Match.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.Model.SelectedTeam">
+    <Position X="16" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAgCAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\SelectedTeam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.Model.Statistic">
+    <Position X="13.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAAAAACAEAAAAABAAAABIAMAAACAkAAAA=</HashCode>
+      <FileName>Model\Statistics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.Model.Team">
+    <Position X="6.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAMAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Team.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.Model.User">
+    <Position X="2.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Model\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.Model.DB.MyScoreDB">
+    <Position X="36.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAACCAAAAAAAAAEAAAAAAAAAEAAAAAAQAAAAAIAAAA=</HashCode>
+      <FileName>Model\DB\MyScoreDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.Properties.Resources">
+    <Position X="11.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.Properties.Settings">
+    <Position X="18.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.View.AddMatchPage" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AddMatchPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.AddNewChampionshipPage" BaseTypeListCollapsed="true">
+    <Position X="25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AddNewChampionshipPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.AddNewTeamPage" BaseTypeListCollapsed="true">
+    <Position X="25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AddNewTeamPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.AddTeamInLeaguePage" BaseTypeListCollapsed="true">
+    <Position X="27.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AddTeamInLeaguePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.AllChampionshipPage" BaseTypeListCollapsed="true">
+    <Position X="29.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\AllChampionshipPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.ChampionshipWindow" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ChampionshipWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.ControlLastMatch" BaseTypeListCollapsed="true">
+    <Position X="25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ControlLastMatch.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.ControlMatch" BaseTypeListCollapsed="true">
+    <Position X="27.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ControlMatch.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.ControlPlaceInTable" BaseTypeListCollapsed="true">
+    <Position X="29.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ControlPlaceInTable.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.ControlRosterPlayer" BaseTypeListCollapsed="true">
+    <Position X="27.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ControlRosterPlayer.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.ControlTeamMatch" BaseTypeListCollapsed="true">
+    <Position X="31.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ControlTeamMatch.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.EditChampionshipPage" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\EditChampionshipPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.EditTeamPage" BaseTypeListCollapsed="true">
+    <Position X="27.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\EditTeamPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.LoginPage" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\LoginPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.MatchStatistic" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\MatchStatistic.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.MatchWindow" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\MatchWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.RegPage" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\RegPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.View.TeamPage" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\TeamPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.ViewModel.AddMatchViewModel">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAgACAAAQIAAQAAAAAAAAAQAAAAiCAQBAAgEAAAAAAA=</HashCode>
+      <FileName>ViewModel\AddMatchViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.AddNewChampionshipViewModel">
+    <Position X="20.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAIAAAwAAAEAAAAAAAAAQAgACAAJAAAAQAAAACAAA=</HashCode>
+      <FileName>ViewModel\AddNewChampionshipViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.AddNewTeamViewModel">
+    <Position X="27.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAQAAAEAAAAAACAAQEgAIQABAAAAQAAAACAAA=</HashCode>
+      <FileName>ViewModel\AddNewTeamViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.AddTeamInLeagueViewModel">
+    <Position X="34" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAACAAAQIAAAAAAAAAAAgCAAAgAAAQAAAAEAAAAAAA=</HashCode>
+      <FileName>ViewModel\AddTeamInLeagueViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.ChampionshipPageInfoViewModel">
+    <Position X="40.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAEAMAASAAAAAAAAAAAAUAgEASEAIAEAgAgAQA=</HashCode>
+      <FileName>ViewModel\ChampionshipPageInfoViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.ChampionshipsListViewModel">
+    <Position X="2.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEBAMEAAACAAAgAAAABiAAAEEAAAAJAAIAASAAiAAAA=</HashCode>
+      <FileName>ViewModel\ChampionshipsListViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.ChampionshipsViewModel">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAACAAAAAAAAAAAAAAAQAAAAEAAAAAAA=</HashCode>
+      <FileName>ViewModel\ChampionshipsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.EditChampionshipViewModel">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAEAwAAAEAAAAAAAAAQAgACAABAUAAAAAgAAAAA=</HashCode>
+      <FileName>ViewModel\EditChampionshipViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.EditMatchStatisticViewModel">
+    <Position X="16" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAAACAAASoAAAAEASAEggAAAJAEAABYBcAgECAkhQAI=</HashCode>
+      <FileName>ViewModel\EditMatchStatisticViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.EditTeamViewModel">
+    <Position X="22.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAEAQAAAEAAAAAAIAAQAgAIQABAQAAAAAAAAAEA=</HashCode>
+      <FileName>ViewModel\EditTeamViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.LastMatchViewModel">
+    <Position X="29.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAIAQAAAABAAAAAAAAgAI=</HashCode>
+      <FileName>ViewModel\LastMatchViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.LoginViewModel">
+    <Position X="36.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAQCAAAgAAAAAAAAAAAAAAAAAAAAAAAAiAAAA=</HashCode>
+      <FileName>ViewModel\LoginViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.MainViewModel">
+    <Position X="31.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.MatchViewModel">
+    <Position X="4.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAQAAAAAAAAAAAAAAAAAAAAAgEAAAhMQI=</HashCode>
+      <FileName>ViewModel\MatchViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.MatchWindowViewModel">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAgAAmACQAACAAgSAEEIACA5BEAURIhMAAECAkAQAI=</HashCode>
+      <FileName>ViewModel\MatchWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.NavigateViewModel">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ViewModel\NavigateViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.RegViewModel">
+    <Position X="18.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAQCAAAgAAAAAAAAAAAAAAAAAAAAAQAAiAAAA=</HashCode>
+      <FileName>ViewModel\RegViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.TeamInLeagueViewModel">
+    <Position X="25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAQAAIAAgAggAAAEAAAAAAAAAgAAAAEEAEAAAQwgA=</HashCode>
+      <FileName>ViewModel\TeamInLeagueViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.TeamPageInfoViewModel">
+    <Position X="31.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEBACAAEAIAAQAAgBEAIAAUBAQIQAACFEAAAAAAgAMA=</HashCode>
+      <FileName>ViewModel\TeamPageInfoViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.TeamsViewModel">
+    <Position X="38.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAQAAAAQAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\TeamsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.ViewModelLocator">
+    <Position X="11.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAAA=</HashCode>
+      <FileName>ViewModel\ViewModelLocator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.Base.DelegateCommand" BaseTypeListCollapsed="true">
+    <Position X="7" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAABAQACCAQQAAEQAAAAAAAAAAAAAAAAAAACAAEA=</HashCode>
+      <FileName>ViewModel\Base\DelegateCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.ViewModel.Base.DelegateCommand&lt;T&gt;" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAABAQACCAQQAAEQAAAAAAAAAAAAAAAAAAACAAEA=</HashCode>
+      <FileName>ViewModel\Base\DelegateCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyScore.ViewModel.Base.CommandManagerHelper">
+    <Position X="22.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACEAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>ViewModel\Base\DelegateCommand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyScore.ViewModel.Base.ViewModelBase">
+    <Position X="26.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\Base\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="MyScore.View.ControlPlaceInTable"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyScore.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="700">
+    <StackPanel Orientation="Horizontal">
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding Place}" Height="25" Width="25"/>
+        <Button BorderThickness="0" HorizontalContentAlignment="Left" Background="White" Command="{Binding OnTeamPage}" Height="25" Width="200">
+            <TextBlock Text="{Binding Team, Mode=OneWay}" TextDecorations="UnderLine"/>
+        </Button>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding CountMatches}" Height="25" Width="100"/>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding Win}" Height="25" Width="50"/>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding Draw}" Height="25" Width="50"/>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding Lose}" Height="25" Width="50"/>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding ScoredGoals}" Height="25" Width="50"/>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding ConcedeGoals}" Height="25" Width="50"/>
+        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{Binding Point}" Height="25" Width="50"/>
+        <Button Background="White" BorderThickness="0" Command="{Binding DeleteTeamCommand}" Visibility="{Binding Visibility}" Height="25" Width="25">
+            <Image Source="/MyScore;component/Delete.png"/>
+        </Button>
+    </StackPanel>
+</UserControl>

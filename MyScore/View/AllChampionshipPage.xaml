@@ -1,0 +1,72 @@
+﻿<Page x:Class="MyScore.View.AllChampionshipPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyScore.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MatchDay">
+
+    <Grid>
+        <Grid Background="Green" HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="800" Margin="0,0,0,0">
+            <Grid HorizontalAlignment="Left" Width="75" Height="75" Margin="20,10,505,10">
+                <Border CornerRadius="8.8" BorderThickness="1" Background="White">
+                    <Image Source="/MyScore;component/Logo.jpg" Stretch="Fill"  HorizontalAlignment="Left" Height="55" Margin="9.2,9.2,0,0" VerticalAlignment="Top" Width="55"/>
+                </Border>
+            </Grid>
+            <Button Visibility="{Binding Visibility}" BorderThickness="0" Content="Создать Чемпионат" Command="{Binding AddChampionshipCommand}" Height="auto" Width="auto" Background="Green" Foreground="White" Margin="320,30,355,25">
+                <!--<Image Source="/MyScore;component/Add.png" HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="10"/>-->
+            </Button>
+            <Button Visibility="{Binding Visibility}" BorderThickness="0" Content="Создать Команду" Command="{Binding AddTeamCommand}" Height="auto" Width="auto" Background="Green" Foreground="White" Margin="450,30,225,25">
+                <!--<Image Source="/MyScore;component/Add.png" HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="10"/>-->
+            </Button>
+            <Button Visibility="{Binding VisibilityReg}" Command="{Binding LoginCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0" Content="Войти" Background="Green" Foreground="White" Width="40" Margin="660,10,0,0"/>
+            <Label Visibility="{Binding VisibilityReg}" HorizontalAlignment="Left" VerticalAlignment="Top" Content="или" Foreground="White" Width="50" Height="25" VerticalContentAlignment="Center" Margin="660,31,0,0"/>
+            <Button Visibility="{Binding VisibilityReg}" Command="{Binding RegCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0" Content="Зарегистрироваться" Background="Green" Foreground="White" Width="120" Margin="660,61,0,0"/>
+            <Label Visibility="{Binding VisibilityExit}" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{Binding Email}" Foreground="White" Width="150" Height="25" VerticalContentAlignment="Center" Margin="630,5,0,0"/>
+            <Button Visibility="{Binding VisibilityExit}" Command="{Binding ExitCommand}" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="0" Content="Выйти" Background="Green" Foreground="White" Width="40" Margin="740,35,0,0"/>
+            <!--<Label Content="Создать Чемпионат" Height="auto" Width="100" Foreground="White" FontSize="8" Margin="470,10,30,45"/>-->
+        </Grid>
+        <TabControl HorizontalAlignment="Left" Height="340" Margin="0,100,0,0" VerticalAlignment="Top" Width="800">
+            <TabItem Header="Турниры">
+                <StackPanel>
+                    <ScrollViewer Height="299" Margin="0,0,0.4,0">
+                        <ListBox Padding="0" Height="auto" VerticalAlignment="Top" Width="772" ItemsSource="{Binding ChampionshipsList, Mode=TwoWay}" >
+                            <ListBox.ItemTemplate>
+                                <DataTemplate >
+                                    <Button Padding="0" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="30"  Background="White" BorderBrush="White" Command="{Binding OnChampionshipPageInfoCommand}" Content="{Binding Path=Championship}" Width="755">
+                                    </Button>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </ScrollViewer>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Команды" Visibility="{Binding Visibility}">
+                <ScrollViewer Margin="0,0,20.4,27">
+                    <ListBox Padding="0" Height="auto" VerticalAlignment="Top" Width="772" ItemsSource="{Binding TeamsList, Mode=TwoWay}" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Button Padding="0" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="30"  Background="White" BorderBrush="White" Command="{Binding TeamPageCommand}" Content="{Binding Path=Name}" Width="755">
+                                </Button>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Visibility="{Binding VisibilityUser}"  Header="Мои команды">
+                <ScrollViewer>
+                    <ListBox Padding="0" Height="auto" VerticalAlignment="Top" Width="772" ItemsSource="{Binding MyTeamsList, Mode=TwoWay}" >
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Button Padding="0" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Height="30"  Background="White" BorderBrush="White" Command="{Binding TeamPageCommand}" Content="{Binding Path=Name}" Width="755">
+                                </Button>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

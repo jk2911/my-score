@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="MyScore.View.ControlMatch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyScore.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="800">
+    <StackPanel Orientation="Horizontal">
+        <Label Content="{Binding Time}" Height="25" Width="70"/>
+        <Label Content="{Binding Stage}" Height="25" Width="120"/>
+        <Label Content="{Binding HomeTeam}" Height="25" Width="120"/>
+        <Label Content="{Binding Goals1}" Height="25" Width="25"/>
+        <Label HorizontalContentAlignment="Center" Content=":" Height="25" Width="14"/>
+        <Label Content="{Binding Goals2}" Height="25" Width="25"/>
+        <Label Content="{Binding AwayTeam}" HorizontalContentAlignment="Right" Height="25" Width="120"/>
+        <Button BorderThickness="0" Command="{Binding OpenMatchWindow}" Background="White" Height="25" Width="206" Margin="0,0,0,-0.2">
+            <TextBlock Text="Перейти к матчу" TextDecorations="UnderLine"/>
+        </Button>
+    </StackPanel>
+</UserControl>

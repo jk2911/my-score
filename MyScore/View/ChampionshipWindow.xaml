@@ -1,0 +1,103 @@
+﻿<Page x:Class="MyScore.View.ChampionshipWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyScore.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ChampionshipWindow">
+
+
+    <Grid>
+        <Grid Background="Green" HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="800" Margin="0,0,0,0">
+            <Grid HorizontalAlignment="Left" Width="75" Height="75" Margin="20,10,505,10">
+                <Border CornerRadius="8.8" BorderThickness="1" Background="White">
+                    <Image Source="{Binding ImageSrc}"  HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="67.5" MaxWidth="67.5" MinHeight="56.25" MinWidth="56.25"/>
+                </Border>
+            </Grid>
+            <Label Content="{Binding Championship}" Foreground="White" FontSize="17" HorizontalAlignment="Left" Margin="120,30,0,0" VerticalAlignment="Top" Width="295" Height="30"/>
+            <Button BorderThickness="0" Foreground="White" Content="Главная" Background="Green" Command="{Binding HomePageCommand}" Height="25" Margin="720,10,23,60"/>
+            <Button Visibility="{Binding Visibility}" BorderThickness="0" Foreground="White" Content="Изменить" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Green" Command="{Binding EditChampionshipCommand}" Height="25" Margin="720,35,0,0" Width="57"/>
+            <Button Visibility="{Binding Visibility}" BorderThickness="0" Foreground="White" Content="Удалить" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Green" Command="{Binding RemoveChampionshipCommand}" Height="25" Margin="720,60,0,0" Width="57"/>
+        </Grid>
+        <TabControl HorizontalAlignment="Left" Height="335" Margin="0,105,0,0" VerticalAlignment="Top" Width="800">
+            <TabItem Header="Таблица">
+                <StackPanel>
+                    <Grid>
+                        <Button Visibility="{Binding Visibility}" Command="{Binding TeamInLeagueCommand}" Background="Green" Foreground="White" Height="25" Width="170" Content="Добавить команду в лигу" Margin="10,10,614.4,0" >
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <Button Visibility="{Binding Visibility}" Command="{Binding UpdateLeagueCommand}" Background="Green" Foreground="White" Height="25" Content="Обновить" Margin="197,10,507.4,-0.6" >
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="5"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Height="25" Margin="0,0,0,0" >
+                        <Label Content="#" Height="25" Width="25"/>
+                        <Label Content="Команда" Height="25" Width="250"/>
+                        <Label Content="И" Height="25" Width="75"/>
+                        <Label Content="В" Height="25" Width="50"/>
+                        <Label Content="Н" Height="25" Width="50"/>
+                        <Label Content="П" Height="25" Width="50"/>
+                        <Label Content="ГЗ" Height="25" Width="50"/>
+                        <Label Content="ГП" Height="25" Width="50"/>
+                        <Label Content="О" Height="25" Width="50"/>
+                    </StackPanel>
+                    <ScrollViewer  Width="Auto" Margin="0,0,17.4,27.2" Height="220">
+                        <ListBox Height="auto" VerticalAlignment="Top" Width="800" ItemsSource="{Binding LeagueTeams, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <local:ControlPlaceInTable/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </ScrollViewer>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Результаты">
+                <Grid>
+                    <ScrollViewer Height="255" Margin="0,0,17.4,27.2">
+                        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="0,10,0,10.2">
+                            <ListBox Height="auto" VerticalAlignment="Top" Width="800" ItemsSource="{Binding LeagueMatchResults, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <local:ControlMatch/>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Календарь">
+                <StackPanel>
+                    <Button Visibility="{Binding Visibility}" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding AddMatchCommand}" Background="Green" Foreground="White" Height="25" Width="170" Content="Добавить матч в расписание" Margin="20,0,0,0" >
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <ScrollViewer Height="255" Margin="0,0,17.4,27.2">
+                        <ListBox Height="auto" VerticalAlignment="Top" Width="800" ItemsSource="{Binding LeagueMatchCalender, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,-5.6,0">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <local:ControlMatch/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </ScrollViewer>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

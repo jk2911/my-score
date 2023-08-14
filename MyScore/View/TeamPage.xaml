@@ -1,0 +1,136 @@
+﻿<Page x:Class="MyScore.View.TeamPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MyScore.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Team">
+
+    <Grid>
+        <Grid Background="Green" HorizontalAlignment="Left" Height="95" VerticalAlignment="Top" Width="800" Margin="0,0,0,0">
+            <Grid HorizontalAlignment="Left" Width="75" Height="75" Margin="20,10,505,10">
+                <Border CornerRadius="8.8" BorderThickness="1" Background="White">
+                    <Image Source="{Binding ImageSrc}"  HorizontalAlignment="Center" VerticalAlignment="Center" MaxHeight="67.5" MaxWidth="67.5" MinHeight="56.25" MinWidth="56.25"/>
+                </Border>
+            </Grid>
+            <Label Content="{Binding Team}" Foreground="White" FontSize="17" HorizontalAlignment="Left" Margin="130,30,0,0" VerticalAlignment="Top" Width="325" Height="30"/>
+            <Button HorizontalContentAlignment="Left" BorderThickness="0" Command="{Binding EditMyCommand}" Background="Green" Foreground="White" Content="{Binding MyTeam, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding VisibilityUser}" HorizontalAlignment="Left" Width="195" VerticalAlignment="Top" Height="25" Margin="130,65,0,0"/>
+            <Button BorderThickness="0" Foreground="White" Content="Главная" Command="{Binding HomePageCommand}" Background="Green" Height="25" Margin="720,10,23,60"/>
+            <Button Visibility="{Binding Visibility}" BorderThickness="0" Foreground="White" Content="Изменить" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Green" Command="{Binding EditTeamCommand}" Height="25" Margin="720,35,0,0" Width="57"/>
+            <Button Visibility="{Binding Visibility}" BorderThickness="0" Foreground="White" Content="Удалить" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Green" Command="{Binding RemoveTeamCommand}" Height="25" Margin="720,60,0,0" Width="57"/>
+        </Grid>
+        <TabControl HorizontalAlignment="Left" Height="340" Margin="0,100,0,0" VerticalAlignment="Top" Width="800">
+            <TabItem Header="Результаты">
+                <ScrollViewer Margin="0,0,14.4,27">
+                    <StackPanel>
+                        <ListBox Height="auto" VerticalAlignment="Top" Width="800" ItemsSource="{Binding LeagueMatchResults, Mode=TwoWay}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <local:ControlTeamMatch/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Календарь">
+                <ScrollViewer Margin="0,0,16.4,27">
+                    <StackPanel>
+                        <ListBox Height="auto" VerticalAlignment="Top" Width="800" ItemsSource="{Binding LeagueMatchCalender, Mode=TwoWay}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <local:ControlTeamMatch/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Таблица">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Height="25" Margin="0,0,0,0" >
+                        <Label Content="#" Height="25" Width="25"/>
+                        <Label Content="Команда" Height="25" Width="250"/>
+                        <Label Content="И" Height="25" Width="75"/>
+                        <Label Content="В" Height="25" Width="50"/>
+                        <Label Content="Н" Height="25" Width="50"/>
+                        <Label Content="П" Height="25" Width="50"/>
+                        <Label Content="ГЗ" Height="25" Width="50"/>
+                        <Label Content="ГП" Height="25" Width="50"/>
+                        <Label Content="О" Height="25" Width="50"/>
+                    </StackPanel>
+                    <ScrollViewer Width="Auto" Margin="0,0,10.4,0" Height="259">
+                        <ListBox Height="auto" VerticalAlignment="Top" Width="800" ItemsSource="{Binding LeagueTeams, Mode=TwoWay}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <local:ControlPlaceInTable/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </ScrollViewer>
+                </StackPanel>
+            </TabItem>
+            <!--<TabItem Header="Состав">
+                <StackPanel Background="White">
+                    <StackPanel Visibility="{Binding Visibility}">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="#" Width="25"/>
+                            <Label Content="Имя"  Width="200"/>
+                            <Label Content="Страна"  Width="150"/>
+                            <Label Content="Дата рождения"  Width="150"/>
+                            <Label Content="Позиция"  Width="150"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox MaxLength="2" Text="{Binding Number, UpdateSourceTrigger=PropertyChanged}"  Width="25"/>
+                            <TextBox MaxLength="70" Text="{Binding Name}"  Width="200"/>
+                            <TextBox MaxLength="70" Text="{Binding Country}"  Width="150"/>
+                            <DatePicker DisplayDateStart="{Binding DateStart}" DisplayDateEnd="{Binding DateEnd}" Focusable="False" SelectedDate="{Binding Date}"  Width="150"/>
+                            <ComboBox SelectedItem="{Binding Position}" Width="150">
+                                <TextBlock Text="Вратарь"/>
+                                <TextBlock Text="Защитник"/>
+                                <TextBlock Text="Полузащитник"/>
+                                <TextBlock Text="Нападающий"/>
+                            </ComboBox>
+                            <Button BorderThickness="0" Command="{Binding AddPlayerCommand}" Background="White" Content="Добавить" Width="116"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <Label Content="Вратари" Height="23" Background="LightGray"/>
+                    <ListBox Height="auto" VerticalAlignment="Top" Width="800" ItemsSource="{Binding Goalkeepers, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <local:ControlRosterPlayer/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Label Content="Защитники" Height="23" Background="LightGray"/>
+                    <ListBox Height="auto" VerticalAlignment="Top" Width="800" ItemsSource="{Binding Defenders, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <local:ControlRosterPlayer/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Label Content="Полузащитники" Height="23" Background="LightGray"/>
+                    <ListBox Height="auto" VerticalAlignment="Top" Width="800" ItemsSource="{Binding Midfielders, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <local:ControlRosterPlayer/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Label Content="Нападающие" Height="23" Background="LightGray"/>
+                    <ListBox Height="auto" VerticalAlignment="Top" Width="800" ItemsSource="{Binding Attackers, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <local:ControlRosterPlayer/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </TabItem>-->
+        </TabControl>
+
+    </Grid>
+</Page>
